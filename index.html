@@ -79,6 +79,11 @@
             height: auto;
             border-radius: 4px;
             margin: 10px 0;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        img:hover {
+            opacity: 0.9;
         }
         .project-images {
             display: flex;
@@ -93,6 +98,51 @@
             margin-top: 50px;
             color: #666;
             font-size: 0.85rem;
+        }
+
+        /* Modern Lightbox Overlay Styles */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 6px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+            margin: 0;
+            cursor: default;
+        }
+        #lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 300;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+            line-height: 1;
+            padding: 5px;
+        }
+        #lightbox-close:hover {
+            color: #ccc;
         }
     </style>
 </head>
@@ -120,7 +170,7 @@
                 </div>
                 <div>
                     <figure>
-                        <img alt="ai.productions" src="https://7agent.github.io/darrenl/wp-content/uploads/2024/08/aipro.jpg" width="200" height="200">
+                        <img alt="ai.productions" src="https://7agent.github.io/darrenl/wp-content/uploads/2024/08/aipro.jpg" width="200" height="200" class="lightbox-trigger">
                     </figure>
                     <p>This project grew from work on tennis.</p>
                     <p>Using a collection of AI models, I produced an AI that could predict whether a serve in professional tennis was an ace or not.</p>
@@ -140,7 +190,7 @@
                 </div>
                 <div>
                     <figure>
-                        <img alt="Chu Media UK Scrot" src="https://7agent.github.io/darrenl/wp-content/uploads/2019/10/2019-10-14-213143_1920x1080_scrot-e1571085212330.png">
+                        <img alt="Chu Media UK Scrot" src="https://7agent.github.io/darrenl/wp-content/uploads/2019/10/2019-10-14-213143_1920x1080_scrot-e1571085212330.png" class="lightbox-trigger">
                     </figure>
                     <p>Web architecture and digital media platform development.</p>
                 </div>
@@ -158,7 +208,7 @@
                 </div>
                 <div>
                     <figure>
-                        <img alt="MoneyHabit" src="https://7agent.github.io/darrenl/wp-content/uploads/2017/04/moneyhabit.png" width="991" height="583">
+                        <img alt="MoneyHabit" src="https://7agent.github.io/darrenl/wp-content/uploads/2017/04/moneyhabit.png" width="991" height="583" class="lightbox-trigger">
                     </figure>
                     <p>Google Calendar plugin that adds to the default set of habits available.</p>
                 </div>
@@ -177,9 +227,9 @@
                 <div>
                     <p>Number 1 for the past 10 years covering the Aegon International tennis tournament.</p>
                     <div class="project-images">
-                        <figure><img alt="Category View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/category.png" width="225"></figure>
-                        <figure><img alt="Players View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/players.png" width="225"></figure>
-                        <figure><img alt="Player Detail View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/players-detail.png" width="225"></figure>
+                        <figure><img alt="Category View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/category.png" width="225" class="lightbox-trigger"></figure>
+                        <figure><img alt="Players View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/players.png" width="225" class="lightbox-trigger"></figure>
+                        <figure><img alt="Player Detail View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/players-detail.png" width="225" class="lightbox-trigger"></figure>
                     </div>
                 </div>
                 <div class="tags">
@@ -197,9 +247,9 @@
                 </div>
                 <div>
                     <div class="project-images">
-                        <figure><img alt="Love Matters 1" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160131_104059.jpg" width="250"></figure>
-                        <figure><img alt="Love Matters 2" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160209_042116.jpg" width="250"></figure>
-                        <figure><img alt="Love Matters 3" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160209_042158.jpg" width="250"></figure>
+                        <figure><img alt="Love Matters 1" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160131_104059.jpg" width="250" class="lightbox-trigger"></figure>
+                        <figure><img alt="Love Matters 2" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160209_042116.jpg" width="250" class="lightbox-trigger"></figure>
+                        <figure><img alt="Love Matters 3" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160209_042158.jpg" width="250" class="lightbox-trigger"></figure>
                     </div>
                     <p>Mobile platform layout design and development.</p>
                 </div>
@@ -217,7 +267,7 @@
                 </div>
                 <div>
                     <figure>
-                        <img alt="imerys_new2" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/10/imerys_new21.jpg" width="300">
+                        <img alt="imerys_new2" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/10/imerys_new21.jpg" width="300" class="lightbox-trigger">
                     </figure>
                     <p><strong>Web Designer</strong><br>Design and branding work for bi-lingual websites and A1 product posters.</p>
                 </div>
@@ -236,20 +286,20 @@
                 </div>
                 <div>
                     <figure>
-                        <img alt="JapanTimes" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/japantimes.gif" width="150">
+                        <img alt="JapanTimes" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/japantimes.gif" width="150" class="lightbox-trigger">
                     </figure>
                     <p><strong>News Editor, Tokyo, Japan</strong><br>Foreign Desk of English-language paper, where I edited world, business and Asia-Pacific stories.</p>
                     
                     <div class="project-images" style="margin-top: 15px;">
-                        <figure><img alt="JT Front" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jt_front.jpg" width="200"></figure>
-                        <figure><img alt="JT Article" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/0901p02-e1440034809867.jpg" width="250"></figure>
+                        <figure><img alt="JT Front" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jt_front.jpg" width="200" class="lightbox-trigger"></figure>
+                        <figure><img alt="JT Article" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/0901p02-e1440034809867.jpg" width="250" class="lightbox-trigger"></figure>
                     </div>
 
                     <hr style="border:0; border-top:1px solid #eee; margin: 15px 0;">
 
                     <div>
                         <figure>
-                            <img alt="JTIstyle" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jtistylec6eb.jpg?w=300" width="150">
+                            <img alt="JTIstyle" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jtistylec6eb.jpg?w=300" width="150" class="lightbox-trigger">
                         </figure>
                         <p><strong>HTML Stylebook</strong><br>Exported from legacy database to HTML. Added links and cross-referencing.<br>Also worked with the Chief Editor to write proposals for updating the styleguide for move to Adobe InDesign.</p>
                     </div>
@@ -258,7 +308,7 @@
 
                     <div>
                         <figure>
-                            <img alt="JTI" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jtic6eb.png?w=300" width="150">
+                            <img alt="JTI" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jtic6eb.png?w=300" width="150" class="lightbox-trigger">
                         </figure>
                         <p><strong>Japan Times Intranet (JTI):</strong> Customised Bugzilla open-source tracking system for use within the Japan Times. The system included escalation, tracking and accountability.</p>
                     </div>
@@ -278,7 +328,7 @@
                 </div>
                 <div>
                     <figure>
-                        <img alt="Cayman-iPhone" src="https://7agent.github.io/darrenl/wp-content/uploads/2008/09/cayman-iphone6e7c.jpg?w=222" width="111">
+                        <img alt="Cayman-iPhone" src="https://7agent.github.io/darrenl/wp-content/uploads/2008/09/cayman-iphone6e7c.jpg?w=222" width="111" class="lightbox-trigger">
                     </figure>
                     <p><strong>Cayman Net News</strong><br>iPhone 3/4 HTML5 mobile site built for leading news providers in the Cayman Islands. jQuery Mobile with transitions that copied a native Apple app.</p>
                 </div>
@@ -327,6 +377,46 @@
         </footer>
 
     </div>
+
+    <!-- Lightbox Overlay Container -->
+    <div id="lightbox">
+        <button id="lightbox-close">&times;</button>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <!-- Lightbox JavaScript Script -->
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const triggers = document.querySelectorAll('.lightbox-trigger');
+
+        triggers.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
 
 </body>
 </html>
