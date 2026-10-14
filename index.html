@@ -1,50 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darren Luckett — Portfolio</title>
-    <!-- Tailwind CSS CDN for modern, clean styling -->
+    <title>Darren Luckett — Digital Architecture & Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: {
+                            950: '#09090b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black min-h-screen">
 
-    <main class="max-w-2xl mx-auto px-6 py-20 md:py-32">
-        <!-- Header Section -->
-        <header class="mb-12">
-            <h1 class="text-3xl font-bold tracking-tight text-white mb-2">Darren Luckett</h1>
-            <p class="text-zinc-400 text-lg">Web Developer & Digital Architecture</p>
+    <div class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+        
+        <!-- Navigation / Header Bar -->
+        <header class="flex justify-between items-center mb-16 pb-6 border-b border-zinc-900">
+            <div>
+                <span class="text-xs font-mono uppercase tracking-widest text-emerald-500 block mb-1">System Profile</span>
+                <h1 class="text-2xl font-bold tracking-tight text-white">Darren Luckett</h1>
+            </div>
+            <div class="text-right text-xs text-zinc-500 font-mono">
+                <span>Status: Online</span>
+                <span class="block text-emerald-400">GitHub Pages Static</span>
+            </div>
         </header>
 
-        <!-- Bio / Introduction -->
-        <section class="space-y-6 text-zinc-300 leading-relaxed mb-16">
-            <p>
-                Welcome to my digital workspace. I specialize in clean web development, automation systems, and high-performance digital infrastructure. 
-            </p>
-            <p>
-                This site is hosted lightning-fast on GitHub Pages, replacing older legacy platforms with a modern, lightweight static environment.
-            </p>
-        </section>
-
-        <!-- Projects / Links Section -->
-        <section class="space-y-4 mb-16">
-            <h2 class="text-sm font-semibold tracking-wider text-zinc-500 uppercase mb-4">Core Projects</h2>
+        <!-- Main Content Area / Consolidated WordPress Archive -->
+        <main class="space-y-12">
             
-            <a href="https://github.com/7Agent" target="_blank" class="block p-4 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/50 transition-all group">
-                <div class="flex justify-between items-center">
-                    <h3 class="font-medium text-white group-hover:text-emerald-400 transition-colors">GitHub Architecture & Repositories</h3>
-                    <span class="text-zinc-500 text-sm">&rarr;</span>
+            <!-- Introduction Section -->
+            <section class="space-y-4 text-zinc-300 leading-relaxed">
+                <h2 class="text-xl font-semibold text-white tracking-tight">Overview</h2>
+                <p>
+                    Welcome to the modernized version of my digital portfolio, transitioned away from legacy WordPress structures into a high-performance, minimalist static environment.
+                </p>
+                <p>
+                    This space houses documentation of my ongoing web development projects, custom automation systems, and technical explorations.
+                </p>
+            </section>
+
+            <!-- Consolidated Archive / Past Posts Section -->
+            <section class="space-y-6">
+                <h2 class="text-xs font-semibold tracking-wider text-zinc-500 uppercase">Archived Content & Projects</h2>
+                
+                <div class="grid gap-4">
+                    <!-- Project Card Item -->
+                    <article class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-medium text-white">Digital Portfolio Migration</h3>
+                            <span class="text-xs font-mono text-zinc-500">2026 Archive</span>
+                        </div>
+                        <p class="text-sm text-zinc-400 leading-relaxed mb-4">
+                            Transitioning legacy blog archives into modern, lightweight single-page architectures for speed, security, and zero bloat.
+                        </p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-mono bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">HTML5</span>
+                            <span class="text-[10px] font-mono bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">Tailwind CSS</span>
+                            <span class="text-[10px] font-mono bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">GitHub Pages</span>
+                        </div>
+                    </article>
                 </div>
-                <p class="text-sm text-zinc-400 mt-1">Explore source code, automation scripts, and custom agent systems.</p>
-            </a>
-        </section>
+            </section>
+
+            <!-- External Links / Repositories -->
+            <section class="space-y-4">
+                <h2 class="text-xs font-semibold tracking-wider text-zinc-500 uppercase">Source & Repositories</h2>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="https://github.com/7Agent/darrenl" target="_blank" class="flex-1 p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all flex items-center justify-between group">
+                        <span class="text-sm font-medium text-white group-hover:text-emerald-400">View Source on GitHub</span>
+                        <span class="text-zinc-500 text-sm">&rarr;</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
 
         <!-- Footer -->
-        <footer class="pt-8 border-t border-zinc-900 text-sm text-zinc-600 flex justify-between items-center">
-            <p>&copy; 2026 Darren Luckett</p>
-            <p>Built with GitHub Pages</p>
+        <footer class="mt-20 pt-8 border-t border-zinc-900 text-xs text-zinc-600 flex flex-col sm:flex-row justify-between gap-4">
+            <p>&copy; 2026 Darren Luckett. All rights reserved.</p>
+            <p class="font-mono">Hosted via GitHub Pages</p>
         </footer>
-    </main>
+
+    </div>
 
 </body>
 </html>
