@@ -1,214 +1,315 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darren Luckett — Portfolio & Digital Architecture</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        zinc: {
-                            950: '#09090b',
-                        }
-                    }
-                }
-            }
+    <title>Darren Luckett - Digital Archive & Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assuming a stylesheet or inline styles -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fdfdfd;
         }
-    </script>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header span {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: 500;
+        }
+        article {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+        .article-header h2 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+        .article-header span {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        .tags {
+            margin-top: 15px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .tags span {
+            background: #f1f3f5;
+            color: #495057;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .project-images {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            border-top: 1px solid #eaeaea;
+            padding-top: 20px;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black min-h-screen">
+<body>
 
-    <div class="max-w-3xl mx-auto px-6 py-16 md:py-24">
-        
-        <!-- Header / Navigation Bar -->
-        <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 pb-6 border-b border-zinc-900 gap-4">
+    <div>
+        <!-- Header -->
+        <header>
             <div>
-                <span class="text-xs font-mono uppercase tracking-widest text-emerald-500 block mb-1">Darren Luckett</span>
-                <h1 class="text-2xl font-bold tracking-tight text-white">Digital Archive & Portfolio</h1>
+                <span>Darren Luckett</span>
+                <h1>Digital Archive &amp; Portfolio</h1>
             </div>
-            <nav class="flex flex-wrap gap-2 text-xs font-mono">
-                <a href="#projects" class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/50 transition-all">Projects</a>
-                <a href="https://github.com/7Agent" target="_blank" class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-emerald-500/50 transition-all">GitHub &rarr;</a>
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/7Agent" target="_blank">GitHub →</a>
             </nav>
         </header>
 
-        <!-- Main Content Area -->
-        <main class="space-y-16" id="projects">
+        <!-- Main Content -->
+        <main id="projects">
 
-            <!-- Project 1: AI Productions -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">ai.productions</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">17/01/2022</span>
+            <!-- ai.productions -->
+            <article>
+                <div class="article-header">
+                    <h2><a href="https://7agent.github.io/darrenl/2022/01/17/ai-productions/index.html" style="text-decoration:none; color:inherit;">ai.productions</a></h2>
+                    <span>17/01/2022</span>
                 </div>
-                <div class="text-zinc-300 leading-relaxed space-y-3 text-sm md:text-base">
-                    <p>This project grew from work on tennis[cite: 5].</p>
-                    <p>Using a collection of AI models, I produced an AI that could predict whether a serve in professional tennis was an ace or not[cite: 5].</p>
+                <div>
+                    <figure>
+                        <a href="https://7agent.github.io/darrenl/2022/01/17/ai-productions/index.html">
+                            <img alt="ai.productions" src="https://7agent.github.io/darrenl/wp-content/uploads/2024/08/aipro.jpg" width="200" height="200">
+                        </a>
+                    </figure>
+                    <p>This project grew from work on tennis.</p>
+                    <p>Using a collection of AI models, I produced an AI that could predict whether a serve in professional tennis was an ace or not.</p>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">AI / Models</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Dall-E</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Pose Detection</span>
+                <div class="tags">
+                    <span>AI / Models</span>
+                    <span>Dall-E</span>
+                    <span>Pose Detection</span>
                 </div>
             </article>
 
-            <!-- Project 2: Chu Media UK -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">Chu Media UK</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">14/10/2019</span>
+            <!-- Chu Media UK -->
+            <article>
+                <div class="article-header">
+                    <h2><a href="https://7agent.github.io/darrenl/2019/10/14/chu-media-uk/index.html" style="text-decoration:none; color:inherit;">Chu Media UK</a></h2>
+                    <span>14/10/2019</span>
                 </div>
-                <div class="text-zinc-300 leading-relaxed text-sm md:text-base">
-                    <p>Web architecture and digital media platform development[cite: 5].</p>
+                <div>
+                    <figure>
+                        <a href="https://7agent.github.io/darrenl/2019/10/14/chu-media-uk/2019-10-14-213143_1920x1080_scrot/index.html" target="_blank" rel="noreferrer noopener">
+                            <img alt="Chu Media UK Scrot" src="https://7agent.github.io/darrenl/wp-content/uploads/2019/10/2019-10-14-213143_1920x1080_scrot-e1571085212330.png">
+                        </a>
+                    </figure>
+                    <p>Web architecture and digital media platform development.</p>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Web Development</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">PWA</span>
-                </div>
-            </article>
-
-            <!-- Project 3: MoneyHabit -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">MoneyHabit</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">05/04/2017</span>
-                </div>
-                <div class="text-zinc-300 leading-relaxed text-sm md:text-base">
-                    <p>Google Calendar plugin that adds to the default set of habits available[cite: 5].</p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Google Calendar</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">TensorFlow</span>
+                <div class="tags">
+                    <span>Web Development</span>
+                    <span>PWA</span>
                 </div>
             </article>
 
-            <!-- Project 4: EastbourneTennis.com -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">EastbourneTennis.com</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">26/10/2016</span>
+            <!-- MoneyHabit -->
+            <article>
+                <div class="article-header">
+                    <h2><a href="https://7agent.github.io/darrenl/2017/04/05/moneyhabit/index.html" style="text-decoration:none; color:inherit;">MoneyHabit</a></h2>
+                    <span>05/04/2017</span>
                 </div>
-                <div class="text-zinc-300 leading-relaxed text-sm md:text-base">
-                    <p>Number 1 for the past 10 years covering the Aegon International tennis tournament[cite: 5].</p>
+                <div>
+                    <figure>
+                        <a href="https://7agent.github.io/darrenl/2017/04/05/moneyhabit/moneyhabit/index.html">
+                            <img alt="MoneyHabit" src="https://7agent.github.io/darrenl/wp-content/uploads/2017/04/moneyhabit.png" width="991" height="583">
+                        </a>
+                    </figure>
+                    <p>Google Calendar plugin that adds to the default set of habits available.</p>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Google AdSense</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Structured Data</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">WordPress Integration</span>
-                </div>
-            </article>
-
-            <!-- Project 5: Love Matters -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">Love Matters</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">09/02/2016</span>
-                </div>
-                <div class="text-zinc-300 leading-relaxed text-sm md:text-base">
-                    <p>Mobile platform layout design and development[cite: 5].</p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Bootstrap</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Mobile Web</span>
+                <div class="tags">
+                    <span>Google Calendar</span>
+                    <span>TensorFlow</span>
                 </div>
             </article>
 
-            <!-- Project 6: Imerys-TC Japon -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">Imerys-TC Japon</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">01/10/2010</span>
+            <!-- EastbourneTennis.com -->
+            <article>
+                <div class="article-header">
+                    <h2><a href="https://7agent.github.io/darrenl/2016/10/26/eastbournetennis-com/index.html" style="text-decoration:none; color:inherit;">EastbourneTennis.com</a></h2>
+                    <span>26/10/2016</span>
                 </div>
-                <div class="text-zinc-300 leading-relaxed space-y-3 text-sm md:text-base">
-                    <p><strong class="text-white">Web Designer</strong><br>Design and branding work for bi-lingual websites and A1 product posters[cite: 5].</p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Adobe Photoshop</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">CSS3</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">HTML5</span>
-                </div>
-            </article>
-
-            <!-- Project 7: The Japan Times -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">The Japan Times</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">18/04/2010</span>
-                </div>
-                <div class="text-zinc-300 leading-relaxed space-y-4 text-sm md:text-base">
-                    <p><strong class="text-white">News Editor, Tokyo, Japan</strong><br>Foreign Desk of English-language paper, where I edited world, business and Asia-Pacific stories[cite: 5].</p>
-                    <div class="border-t border-zinc-800/60 pt-4 space-y-2">
-                        <p><strong class="text-white">HTML Stylebook</strong><br>Exported from legacy database to HTML. Added links and cross-referencing[cite: 5]. Also worked with the Chief Editor to write proposals for updating the styleguide for move to Adobe InDesign[cite: 5].</p>
-                    </div>
-                    <div class="border-t border-zinc-800/60 pt-4 space-y-2">
-                        <p><strong class="text-white">Japan Times Intranet (JTI)</strong><br>Customised Bugzilla open-source tracking system for use within the Japan Times. The system included escalation, tracking and accountability[cite: 5].</p>
+                <div>
+                    <p>Number 1 for the past 10 years covering the Aegon International tennis tournament.</p>
+                    <div class="project-images">
+                        <figure><a href="https://7agent.github.io/darrenl/2016/10/26/eastbournetennis-com/category/index.html"><img alt="Category View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/category.png" width="225"></a></figure>
+                        <figure><a href="https://7agent.github.io/darrenl/2016/10/26/eastbournetennis-com/players/index.html"><img alt="Players View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/players.png" width="225"></a></figure>
+                        <figure><a href="https://7agent.github.io/darrenl/2016/10/26/eastbournetennis-com/players-detail/index.html"><img alt="Player Detail View" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/06/players-detail.png" width="225"></a></figure>
                     </div>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Adobe InDesign</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Bugzilla</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Dreamweaver</span>
+                <div class="tags">
+                    <span>Google AdSense</span>
+                    <span>Structured Data</span>
+                    <span>WordPress Integration</span>
                 </div>
             </article>
 
-            <!-- Project 8: Contract Developer (Cayman Net News & Mucky Detail) -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">Contract Developer</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">28/09/2008</span>
+            <!-- Love Matters -->
+            <article>
+                <div class="article-header">
+                    <h2><a href="https://7agent.github.io/darrenl/2016/02/09/love-matters/index.html" style="text-decoration:none; color:inherit;">Love Matters</a></h2>
+                    <span>09/02/2016</span>
                 </div>
-                <div class="text-zinc-300 leading-relaxed space-y-4 text-sm md:text-base">
-                    <p><strong class="text-white">Cayman Net News</strong><br>iPhone 3/4 HTML5 mobile site built for leading news providers in the Cayman Islands. jQuery Mobile with transitions that copied a native Apple app[cite: 5].</p>
-                    <div class="border-t border-zinc-800/60 pt-4 space-y-2">
-                        <p><strong class="text-white">Mucky Detail</strong><br>Japanese website for car-detailing service based in Fukuoka, Japan. Built using a mixture of CSS div’s and HTML tables to maintain compatibility with the browsers of the time. Gallery, prices, services and contact screens[cite: 5].</p>
+                <div>
+                    <div class="project-images">
+                        <figure><img alt="Love Matters 1" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160131_104059.jpg" width="250"></figure>
+                        <figure><img alt="Love Matters 2" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160209_042116.jpg" width="250"></figure>
+                        <figure><img alt="Love Matters 3" src="https://7agent.github.io/darrenl/wp-content/uploads/2016/02/img_20160209_042158.jpg" width="250"></figure>
+                    </div>
+                    <p>Mobile platform layout design and development.</p>
+                </div>
+                <div class="tags">
+                    <span>Bootstrap</span>
+                    <span>Mobile Web</span>
+                </div>
+            </article>
+
+            <!-- Imerys-TC Japon -->
+            <article>
+                <div class="article-header">
+                    <h2><a href="https://7agent.github.io/darrenl/2010/10/01/imerys-tc-japon/index.html" style="text-decoration:none; color:inherit;">Imerys-TC Japon</a></h2>
+                    <span>01/10/2010</span>
+                </div>
+                <div>
+                    <figure>
+                        <a href="https://7agent.github.io/darrenl/2010/10/01/imerys-tc-japon/imerys_new2-2/index.html" rel="noopener" target="_blank">
+                            <img alt="imerys_new2" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/10/imerys_new21.jpg" width="300">
+                        </a>
+                    </figure>
+                    <p><strong>Web Designer</strong><br>Design and branding work for bi-lingual websites and A1 product posters.</p>
+                </div>
+                <div class="tags">
+                    <span>Adobe Photoshop</span>
+                    <span>CSS3</span>
+                    <span>HTML5</span>
+                </div>
+            </article>
+
+            <!-- The Japan Times -->
+            <article>
+                <div class="article-header">
+                    <h2><a href="https://7agent.github.io/darrenl/2010/04/18/the-japan-times/index.html" style="text-decoration:none; color:inherit;">The Japan Times</a></h2>
+                    <span>18/04/2010</span>
+                </div>
+                <div>
+                    <figure>
+                        <img alt="JapanTimes" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/japantimes.gif" width="150">
+                    </figure>
+                    <p><strong>News Editor, Tokyo, Japan</strong><br>Foreign Desk of English-language paper, where I edited world, business and Asia-Pacific stories.</p>
+                    
+                    <div class="project-images" style="margin-top: 15px;">
+                        <figure><img alt="JT Front" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jt_front.jpg" width="200"></figure>
+                        <figure><img alt="JT Article" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/0901p02-e1440034809867.jpg" width="250"></figure>
+                    </div>
+
+                    <hr style="border:0; border-top:1px solid #eee; margin: 15px 0;">
+
+                    <div>
+                        <figure>
+                            <a href="https://7agent.github.io/darrenl/2010/04/18/the-japan-times/jtistyle/index.html" rel="noopener" target="_blank">
+                                <img alt="JTIstyle" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jtistylec6eb.jpg?w=300" width="150">
+                            </a>
+                        </figure>
+                        <p><strong>HTML Stylebook</strong><br>Exported from legacy database to HTML. Added links and cross-referencing.<br>Also worked with the Chief Editor to write proposals for updating the styleguide for move to Adobe InDesign.</p>
+                    </div>
+
+                    <hr style="border:0; border-top:1px solid #eee; margin: 15px 0;">
+
+                    <div>
+                        <figure>
+                            <a href="https://7agent.github.io/darrenl/2010/04/18/the-japan-times/jti/index.html">
+                                <img alt="JTI" src="https://7agent.github.io/darrenl/wp-content/uploads/2010/04/jtic6eb.png?w=300" width="150">
+                            </a>
+                        </figure>
+                        <p><strong>Japan Times Intranet (JTI):</strong> Customised Bugzilla open-source tracking system for use within the Japan Times. The system included escalation, tracking and accountability.</p>
                     </div>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">jQuery Mobile</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">HTML5 / CSS</span>
+                <div class="tags">
+                    <span>Adobe InDesign</span>
+                    <span>Bugzilla</span>
+                    <span>Dreamweaver</span>
                 </div>
             </article>
 
-            <!-- Project 9: Kyushu Tsuyaku Guide -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">Kyushu Tsuyaku Guide</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">12/02/2005</span>
+            <!-- Contract Developer / Mucky Detail -->
+            <article>
+                <div class="article-header">
+                    <h2><a href="https://7agent.github.io/darrenl/2008/09/28/mucky-detail/index.html" style="text-decoration:none; color:inherit;">Contract Developer</a></h2>
+                    <span>28/09/2008</span>
                 </div>
-                <div class="text-zinc-300 leading-relaxed text-sm md:text-base">
-                    <p><strong class="text-white">Editor & Web Designer, Fukuoka, Japan</strong><br>Editing press releases, magazine and newspaper articles for Louis Vuitton, Parfums Givenchy, Japan Steel, RockStar Games and Fuji Sankei Newspaper. Also designed the company web and DoCoMo i-mode sites in English and Japanese[cite: 5].</p>
+                <div>
+                    <figure>
+                        <a href="https://7agent.github.io/darrenl/2008/09/28/mucky-detail/cayman-iphone/index.html">
+                            <img alt="Cayman-iPhone" src="https://7agent.github.io/darrenl/wp-content/uploads/2008/09/cayman-iphone6e7c.jpg?w=222" width="111">
+                        </a>
+                    </figure>
+                    <p><strong>Cayman Net News</strong><br>iPhone 3/4 HTML5 mobile site built for leading news providers in the Cayman Islands. jQuery Mobile with transitions that copied a native Apple app.</p>
                 </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Editorial</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">DoCoMo i-mode</span>
-                </div>
-            </article>
-
-            <!-- Project 10: WURFL -->
-            <article class="p-6 md:p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-emerald-500/40 transition-all space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                    <h2 class="text-xl font-semibold text-white tracking-tight">WURFL</h2>
-                    <span class="text-xs font-mono text-zinc-500 bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-800">12/02/2003</span>
-                </div>
-                <div class="text-zinc-300 leading-relaxed text-sm md:text-base">
-                    <p>Developed official test suite using JSP Wall and WURFL. Built to improve the accuracy of the data contained within the expanding WURFL XML file[cite: 5].</p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">JSP</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">Tomcat</span>
-                    <span class="text-[10px] font-mono bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md">WML / XML</span>
+                <div class="tags">
+                    <span>jQuery Mobile</span>
+                    <span>HTML5 / CSS</span>
                 </div>
             </article>
 
         </main>
 
         <!-- Footer -->
-        <footer class="mt-24 pt-8 border-t border-zinc-900 text-xs text-zinc-600 flex flex-col sm:flex-row justify-between gap-4 font-mono">
-            <p>&copy; 2026 Darren Luckett. All rights reserved.</p>
+        <footer>
+            <p>© 2026 Darren Luckett. All rights reserved.</p>
             <p>Hosted via GitHub Pages</p>
         </footer>
 
