@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darren Luckett — Portfolio</title>
+    <!-- Tailwind CSS CDN for modern, clean styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Hello World</h1>
-  <p>Welcome to my portfolio.</p>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black">
+
+    <main class="max-w-2xl mx-auto px-6 py-20 md:py-32">
+        <!-- Header Section -->
+        <header class="mb-12">
+            <h1 class="text-3xl font-bold tracking-tight text-white mb-2">Darren Luckett</h1>
+            <p class="text-zinc-400 text-lg">Web Developer & Digital Architecture</p>
+        </header>
+
+        <!-- Bio / Introduction -->
+        <section class="space-y-6 text-zinc-300 leading-relaxed mb-16">
+            <p>
+                Welcome to my digital workspace. I specialize in clean web development, automation systems, and high-performance digital infrastructure. 
+            </p>
+            <p>
+                This site is hosted lightning-fast on GitHub Pages, replacing older legacy platforms with a modern, lightweight static environment.
+            </p>
+        </section>
+
+        <!-- Projects / Links Section -->
+        <section class="space-y-4 mb-16">
+            <h2 class="text-sm font-semibold tracking-wider text-zinc-500 uppercase mb-4">Core Projects</h2>
+            
+            <a href="https://github.com/7Agent" target="_blank" class="block p-4 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/50 transition-all group">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-medium text-white group-hover:text-emerald-400 transition-colors">GitHub Architecture & Repositories</h3>
+                    <span class="text-zinc-500 text-sm">&rarr;</span>
+                </div>
+                <p class="text-sm text-zinc-400 mt-1">Explore source code, automation scripts, and custom agent systems.</p>
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-8 border-t border-zinc-900 text-sm text-zinc-600 flex justify-between items-center">
+            <p>&copy; 2026 Darren Luckett</p>
+            <p>Built with GitHub Pages</p>
+        </footer>
+    </main>
+
 </body>
 </html>
